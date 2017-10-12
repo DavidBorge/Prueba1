@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main"
+    tools:context="com.example.david.prueba1.MainActivity">
+
+    <EditText
+        android:id="@+id/edit_message"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message"/>
+    <!--weight="1": para que ocupe ttodo el espacio horizontal restante-->
+    <!--width="0dp": para que no haga el cálculo a lo tonto, ya que el ancho va a venir dado por el peso-->
+    <!--hint: pista (hint) que le dice al usuario lo que tiene que introducir en el campo de texto de tipo EditText. Al ser una pista, en cuanto el usuario introduce un caracter, la pista desaparece-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_send"
+        android:onClick="sendMessage"/>  <!--Llama a la función sendMessage de la clase MainActivity al hacer clic en el botón-->
+    <!--text: texto que sale dentro del botón (sale en mayúsculas aunque lo pongas en minúsculas-->
+
+</LinearLayout>
